@@ -1,9 +1,13 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+  state: {
+    players: [],
+    winner: ''
+  },
+  mutations: {
+    SET_FIELD(state, [field, value]) {
+      state[field] = value
+    }
+  }
+})
